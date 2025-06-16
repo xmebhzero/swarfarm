@@ -124,6 +124,9 @@ INSTALLED_APPS = [
     'herders',
     'bestiary',
     'news',
+    'feedback',
+    'data_log',
+    'archive',
 ]
 
 if DEBUG:
@@ -273,6 +276,7 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_CLASSES': (
         'rest_framework.throttling.AnonRateThrottle',
         'rest_framework.throttling.UserRateThrottle',
+        'apiv2.throttling.ScopedPostRequestThrottle',
     ),
     'DEFAULT_THROTTLE_RATES': {
         'anon': '500/min',

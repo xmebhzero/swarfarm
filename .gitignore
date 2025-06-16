@@ -33,6 +33,3 @@ yarn-error.log*
 celery.log
 
 .bin
-
-packs/*
-*.dump
