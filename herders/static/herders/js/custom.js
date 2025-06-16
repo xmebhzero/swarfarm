@@ -21,10 +21,7 @@ $(function () {
 
     $('.rating').rating();
 
-<<<<<<< HEAD
-=======
     DisplayMessages();
->>>>>>> parent of 0bf5ec57 (Deleted stuff for scale down)
     initSelect();
 });
 
@@ -88,13 +85,10 @@ $('#bestiary_quick_search').find('#id_name').on('select2:select', function(event
     }
 });
 
-<<<<<<< HEAD
-=======
 $(document).ajaxComplete(function() {
     DisplayMessages();
 });
 
->>>>>>> parent of 0bf5ec57 (Deleted stuff for scale down)
 //Defaults for the bootboxes
 bootbox.setDefaults({
     backdrop: true,
@@ -142,9 +136,6 @@ function ToggleLoading(targetElement, setLoadingOn) {
     }
 }
 
-<<<<<<< HEAD
-
-=======
 //Generate growl notifications
 function DisplayMessages() {
     $.ajax({
@@ -235,19 +226,15 @@ function DetachDataLogs() {
         }
     });
 }
->>>>>>> parent of 0bf5ec57 (Deleted stuff for scale down)
 
 $('body')
     .on('click', '.canvas-slid a', function() {
         $('.navmenu').offcanvas('hide');
     })
-<<<<<<< HEAD
-=======
     .on('click', '[data-set-max-level]', SetMaxLevel)
     .on('click', '[data-skill-field]', SetMaxSkillLevel)
     .on('select2:selecting', '[data-set-stars]', SetStars)
     .on('click', '.essence-storage', function() { EssenceStorage() })
->>>>>>> parent of 0bf5ec57 (Deleted stuff for scale down)
     .on('click', '.closeall', function() { $('.panel-collapse.show').collapse('hide'); })
     .on('click', '.openall', function() { $('.panel-collapse:not(".show")').collapse('show'); })
     .on('click', '.data-logs-detach', function() { DetachDataLogs() })
@@ -261,8 +248,6 @@ $('body')
     .on('hide.bs.modal', function() {
         clearTimeout(autosubmitDelay);
     })
-<<<<<<< HEAD
-=======
     .on('mouseenter', '.rune-popover', function() {
         var el = $(this);
         popoverDelay = setTimeout(function () {
@@ -392,7 +377,6 @@ $('body')
             });
         }, 250);
     })
->>>>>>> parent of 0bf5ec57 (Deleted stuff for scale down)
     .on('mouseenter', '.skill-popover', function() {
         var el = $(this);
         popoverDelay = setTimeout(function () {
@@ -418,13 +402,6 @@ $('body')
 
         }, 250);
     })
-<<<<<<< HEAD
-    .on('mouseleave', '.skill-popover', function(event) {
-        $(this).popover('hide');
-        clearTimeout(popoverDelay);
-    });
-
-=======
     .on('mouseleave', '.skill-popover, .monster-popover', function(event) {
         $(this).popover('hide');
         clearTimeout(popoverDelay);
@@ -444,7 +421,6 @@ $('#bulkAddFormset').formset({
     $('.rating').rating();
 });
 
->>>>>>> parent of 0bf5ec57 (Deleted stuff for scale down)
 //Update filter buttons on page load
 var monster_table = $('#bestiary_table');
 var filter_buttons = $('button.filter');
@@ -532,8 +508,6 @@ $('button.reset').click(function() {
     $('button.filter').toggleClass(active_filter_class, false);
     monster_table.trigger('saveSortReset').trigger("sortReset");
 });
-<<<<<<< HEAD
-=======
 
 //Rune form common functions
 function update_main_slot_options(slot, main_stat_input) {
@@ -695,4 +669,3 @@ var RUNE_MAIN_STAT_VALUES = {
 };
 
 var RUNE_SUBSTAT_MAX_VALUES = {"1": 1250, "2": 40.0, "3": 125, "4": 40.0, "5": 125, "6": 40.0, "7": 30.0, "8": 30.0, "9": 35.0, "10": 40.0, "11": 40.0};
->>>>>>> parent of 0bf5ec57 (Deleted stuff for scale down)

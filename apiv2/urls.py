@@ -17,11 +17,8 @@ router.registry.extend(data_log_router.registry)
 
 api_urlpatterns = [
     url(r'^', include(router.urls)),
-<<<<<<< HEAD
-=======
     url(r'^', include(profile_router.urls)),
     url(r'^', include(data_log_router.urls)),
->>>>>>> parent of 0bf5ec57 (Deleted stuff for scale down)
 ]
 
 schema_view = get_swagger_view(
