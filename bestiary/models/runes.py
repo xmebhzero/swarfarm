@@ -722,7 +722,7 @@ class Rune(models.Model, RuneObjectBase):
         else:
             self.main_stat_value = self.MAIN_STAT_VALUES[self.main_stat][self.stars][self.level]
 
-        if self.innate_stat and self.innate_stat_value and self.innate_stat_value > self.SUBSTAT_INCREMENTS[self.innate_stat][self.stars]:
+        if self.innate_stat and self.innate_stat_value and self.innate_stat_value > self.SUBSTAT_INCREMENTS[self.innate_stat][self.stars] and not self.ancient:
             self.innate_stat_value = self.SUBSTAT_INCREMENTS[self.innate_stat][self.stars]
 
         for idx, substat in enumerate(self.substats):

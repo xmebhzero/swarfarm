@@ -36,6 +36,7 @@
             <table id="bestiary_table" class="table table-hover table-condensed monster-table {% if user.is_authenticated and user.summoner.dark_mode %}table-dark{% endif %}" data-save-filters="false">
                 <thead class="{% if user.is_authenticated and user.summoner.dark_mode %}bg-dark{% else %}bg-white{% endif %}">
                     <tr>
+                        {% if request.user.is_authenticated %}<th data-sorter="false" data-columnSelector="disable"></th>{% endif %}
                         <th data-sorter="false" data-columnSelector="disable"></th>
                         <th>Name</th>
                         <th>Stars</th>

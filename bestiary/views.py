@@ -32,6 +32,9 @@ def bestiary(request):
         'init_load': True,
     }
 
+    if request.user.is_authenticated:
+        context['profile_name'] = request.user.username
+
     return render(request, 'bestiary/base.html', context)
 
 
@@ -124,6 +127,9 @@ def bestiary_detail(request, monster_slug):
         'family': monster.monster_family(),
         'monsters': monsters,
     }
+
+    if request.user.is_authenticated:
+        context['profile_name'] = request.user.username
 
     return render(request, 'bestiary/detail_base.html', context)
 

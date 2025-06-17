@@ -26,6 +26,8 @@ services:
       - POSTGRES_DB=${SQL_DB:-swarfarm_dev}
       - POSTGRES_USER=${SQL_USER:-swarfarmer_dev}
       - POSTGRES_PASSWORD=${SQL_PASS:-intentionallyweak}
+    ports:
+      - 5432:5432
 
   swarfarm:
     build:
