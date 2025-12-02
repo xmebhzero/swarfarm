@@ -44,6 +44,7 @@ urlpatterns = [
     url(r'^', include('news.urls', namespace='news')),
 
     # Django auth/admin stuff
+    url('admin/clearcache/', include('clearcache.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', auth_views.LoginView.as_view(form_class=CrispyAuthenticationForm), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), {'next_page': 'news:latest_news'}, name='logout'),

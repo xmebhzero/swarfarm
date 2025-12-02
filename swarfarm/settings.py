@@ -90,6 +90,7 @@ MANAGERS = ADMINS
 
 # Application definition
 INSTALLED_APPS = [
+    'clearcache',
     # Packages
     'django.contrib.admin',
     'django.contrib.auth',
